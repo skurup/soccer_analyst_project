@@ -469,6 +469,8 @@ def main():
     else:  # Big Six Comparison
         show_big_six_comparison(soccer_analyst)
 
+    st.rerun()
+
 def show_league_overview(soccer_analyst):
     try:
         with st.spinner("Loading league data..."):
@@ -529,7 +531,7 @@ def show_league_overview(soccer_analyst):
                 # Add refresh button
                 if st.button("🔄 Refresh Data"):
                     st.cache_data.clear()
-                    st.experimental_rerun()
+                    st.rerun()
                 
                 # Season Progress
                 matches_per_team = 38
